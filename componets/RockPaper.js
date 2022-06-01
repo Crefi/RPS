@@ -22,15 +22,15 @@ export default function RockPaper() {
         let resultString = "";
 
         if (choice === 1) {
-            resultString = randomComputerChoice === 3 ? "Win" : "lose";
+            resultString = randomComputerChoice === 3 ? "Win" : "Lose";
 
         }
         else if (choice === 2 ) {
-            resultString = randomComputerChoice === 1 ? "Win" : "lose";
+            resultString = randomComputerChoice === 1 ? "Win" : "Lose";
 
         }
         else {
-            resultString = randomComputerChoice === 2 ? "Win" : "lose";
+            resultString = randomComputerChoice === 2 ? "Win" : "Lose";
 
         }
         if (choice === randomComputerChoice) {
@@ -46,7 +46,7 @@ export default function RockPaper() {
 
     }, 300);
 
-        Animated.sequence([
+    Animated.sequence([
         Animated.timing(fadeAnimation,{
             toValue: 0,
             duration: 300,
@@ -66,7 +66,7 @@ export default function RockPaper() {
     setTimeout(() => {
         setPlay(true);
     }, 600);
-  }
+  };
 
     return(
         <SafeAreaView style={styles.container}>
@@ -95,17 +95,18 @@ export default function RockPaper() {
         </View>
         </SafeAreaView>
     )
-}
+};
 
  const styles = StyleSheet.create({
     container: {
     flex:1,
     paddingTop: Constants.statusBarHeight,
+  
 },
     content: {
         flex:1,
         marginBottom: 5,
-        backgroundColor: '#e8eaed'
+        backgroundColor: '#ffcc00'
 },
     result : {
         height:100,
@@ -132,6 +133,6 @@ export default function RockPaper() {
         fontWeight:'bold',
 
 
-    }
+    },
 
-})
+});

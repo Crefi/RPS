@@ -43,6 +43,7 @@ const Actions = ({play,canPlay}) => {
         flexDirection:'row',
         justifyContent:'space-around',
         alignItems:'center',
+        backgroundColor: 'yellow',
     },
     actionButton: {
         width:64,

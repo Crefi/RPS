@@ -8,12 +8,13 @@ const ICONS = ['hand-rock','hand-paper','hand-scissors'];
 const DisplayResult = ({userChoice, computerChoice}) => {
   return (
     
-    <><View style={styles.column}>
+    <>
+    <View style={styles.column}>
       <FontAwesome5
         name={ICONS[userChoice - 1]}
         size={64}
         color='#f9d835'
-        soild
+        solid
         style={userChoice === 3 ? styles.scissorsLeftIcon : styles.LeftIcon} />
       <Text style={styles.playerName}>You</Text>
     </View><View style={styles.column}>
@@ -21,7 +22,6 @@ const DisplayResult = ({userChoice, computerChoice}) => {
           name={ICONS[computerChoice - 1]}
           size={64}
           color="#f9d835"
-          soild
           style={computerChoice === 3 ? styles.scissorsRightIcon : styles.rightIcon} />
         <Text style={styles.playerName}>
           Computer
@@ -37,10 +37,12 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:'center',
+    
+
 
   },
   playerName: {
-    color: '#373737',
+    backgroundColor: "#ffcc00",
     fontSize:16,
     marginTop:16,
   },
